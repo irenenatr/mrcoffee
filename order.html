@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Coffee - Order</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="MR.COFFEE Logo" class="logo-image">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="menu.html">menu</a></li>
+                    <li><a href="order.html" class="active">order</a></li>
+                    <li><a href="rewards.html">rewards</a></li>
+                    <li><a href="about.html">about us</a></li>
+                </ul>
+                <div class="profile-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="Brown and Cream Illustrative Coffee Presentation (1).png">
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section class="order-section">
+        <div class="container">
+            <div class="order-layout">
+                <!-- Order Details Form -->
+                <div class="order-details">
+                    <div class="details-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h2>DETAILS</h2>
+                    </div>
+                    
+                    <form id="orderForm" class="order-form">
+                        <!-- Order Type -->
+                        <div class="form-group">
+                            <label>Order Type</label>
+                            <div class="order-type-options">
+                                <div class="order-option">
+                                    <input type="radio" id="dineIn" name="orderType" value="dineIn" checked>
+                                    <label for="dineIn">
+                                        <i class="fas fa-utensils"></i>
+                                        <span>Dine In (10-15 minutes)</span>
+                                    </label>
+                                </div>
+                                <div class="order-option">
+                                    <input type="radio" id="delivery" name="orderType" value="delivery">
+                                    <label for="delivery">
+                                        <i class="fas fa-motorcycle"></i>
+                                        <span>Delivery (30-35 minutes)</span>
+                                    </label>
+                                </div>
+                                <div class="order-option">
+                                    <input type="radio" id="pickup" name="orderType" value="pickup">
+                                    <label for="pickup">
+                                        <i class="fas fa-shopping-bag"></i>
+                                        <span>Pick Up (20-25 minutes)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Name Fields -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <!-- Contact Fields -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+                        <!-- Address Field -->
+                        <div class="form-group address-group" id="addressGroup" style="display: none;">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your delivery address">
+                        </div>
+
+                        <!-- Notes Field -->
+                        <div class="form-group">
+                            <label for="notes">Notes (optional)</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Special instructions for your order..."></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <div class="summary-header">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h2>YOUR ORDER (<span id="itemCount">2</span>)</h2>
+                    </div>
+                    
+                    <div class="order-items" id="orderItems">
+                        <!-- Order items will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="order-totals">
+                        <div class="total-row">
+                            <span>Delivery</span>
+                            <span id="deliveryFee">Rp 10,000</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Discount</span>
+                            <span id="discount">Rp 10,000</span>
+                        </div>
+                        <div class="total-row total-final">
+                            <span>TOTAL</span>
+                            <span id="finalTotal">Rp 87,000</span>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" form="orderForm" class="place-order-btn" id="placeOrderBtn">
+                        PLACE ORDER
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Order Confirmation</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="confirmation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h4>Thank you for your order!</h4>
+                <p>Your order has been placed successfully.</p>
+                <div class="order-details-modal">
+                    <p><strong>Order ID:</strong> <span id="orderId">#12345</span></p>
+                    <p><strong>Estimated Time:</strong> <span id="estimatedTime">15-20 minutes</span></p>
+                    <p><strong>Total:</strong> <span id="modalTotal">Rp 87,000</span></p>
+                </div>
+                <button class="modal-btn" id="trackOrderBtn">Track Order</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Processing your order...</p>
+        </div>
+    </div>
+
+    <script src="order.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Coffee - Menu</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="logo.png" alt="MR.COFFEE Logo" class="logo-image">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="menu.html" class="active">menu</a></li>
+                    <li><a href="order.html">order</a></li>
+                    <li><a href="rewards.html">rewards</a></li>
+                    <li><a href="about.html">about us</a></li>
+                </ul>
+                <div class="profile-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="Brown and Cream Illustrative Coffee Presentation.png">
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="coffee">
+                    <i class="fas fa-coffee"></i>
+                    <span>coffee</span>
+                </button>
+                <button class="category-tab" data-category="non-coffee">
+                    <i class="fas fa-glass-whiskey"></i>
+                    <span>non-coffee</span>
+                </button>
+                <button class="category-tab" data-category="food">
+                    <i class="fas fa-cookie-bite"></i>
+                    <span>food</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="menu-items">
+        <div class="container">
+            <div class="menu-grid" id="menu-grid">
+                <!-- Coffee Items -->
+                <div class="menu-item" data-category="coffee">
+                    <div class="item-image">
+                        <img src="americano plain.png" alt="Americano">
+                    </div>
+                    <h3>AMERICANO</h3>
+                    <p class="description">Rich and bold espresso with hot water for a smooth, strong coffee taste</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 25.000</span>
+                        <button class="add-to-cart" data-item="Americano" data-price="25000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="item-image">
+                        <img src="image-removebg-preview (2).png" alt="Latte">
+                    </div>
+                    <h3>LATTE</h3>
+                    <p class="description">A shot of espresso with steamed milk and a creamy texture</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 27.000</span>
+                        <button class="add-to-cart" data-item="Latte" data-price="27000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="item-image">
+                        <img src="image-removebg-preview (3).png" alt="Mocha">
+                    </div>
+                    <h3>MOCHA</h3>
+                    <p class="description">Chocolate espresso blended with steamed milk and chocolate syrup for a sweet treat</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 29.000</span>
+                        <button class="add-to-cart" data-item="Mocha" data-price="29000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="item-image">
+                        <img src="image-removebg-preview (3).png" alt="Macchiato">
+                    </div>
+                    <h3>MACCHIATO</h3>
+                    <p class="description">A shot of espresso "stained" or topped with a small amount of milk or milk foam</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 30.000</span>
+                        <button class="add-to-cart" data-item="Macchiato" data-price="31000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="item-image">
+                        <img src="image-removebg-preview (4).png" alt="Affogato">
+                    </div>
+                    <h3>AFFOGATO</h3>
+                    <p class="description">A scoop of vanilla ice cream drowned in a shot of hot espresso</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 33.000</span>
+                        <button class="add-to-cart" data-item="Affogato" data-price="33000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="coffee">
+                    <div class="item-image">
+                        <img src="image-removebg-preview (5).png" alt="Matcha Espresso">
+                    </div>
+                    <h3>MATCHA & ESPRESSO</h3>
+                    <p class="description">A shot of espresso and steamed milk with matcha powder for a unique taste</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 35.000</span>
+                        <button class="add-to-cart" data-item="Matcha Espresso" data-price="35000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Non-Coffee Items -->
+                <div class="menu-item" data-category="non-coffee" style="display: none;">
+                    <div class="item-image">
+                        <img src="chocolate.png" alt="Chocolate">
+                    </div>
+                    <h3>CHOCOLATE</h3>
+                    <p class="description">Rich and creamy hot chocolate with whipped cream</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 23.000</span>
+                        <button class="add-to-cart" data-item="Chocolate" data-price="23000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="non-coffee" style="display: none;">
+                    <div class="item-image">
+                        <img src="matcha.png" alt="Matcha">
+                    </div>
+                    <h3>MATCHA</h3>
+                    <p class="description">Premium matcha powder with steamed milk</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 30.000</span>
+                        <button class="add-to-cart" data-item="Matcha" data-price="28000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="non-coffee" style="display: none;">
+                    <div class="item-image">
+                        <img src="lemon tea.png" alt="Lemon Tea">
+                    </div>
+                    <h3>LEMON TEA</h3>
+                    <p class="description">refreshing beverage made by combining black or green tea with lemon juice</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 2O.000</span>
+                        <button class="add-to-cart" data-item="Lemon Tea" data-price="20000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="non-coffee" style="display: none;">
+                    <div class="item-image">
+                        <img src="thai tea.png" alt="Thai Tea">
+                    </div>
+                    <h3>THAI TEA</h3>
+                    <p class="description">A sweet and creamy iced drink made from strongly brewed black tea</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 26.000</span>
+                        <button class="add-to-cart" data-item="Thai Tea" data-price="26000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Food Items -->
+                <div class="menu-item" data-category="food" style="display: none;">
+                    <div class="item-image">
+                        <img src="croissant.png" alt="Croissant">
+                    </div>
+                    <h3>CROISSANT</h3>
+                    <p class="description">Buttery and flaky pastry perfect with coffee</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 15.000</span>
+                        <button class="add-to-cart" data-item="Croissant" data-price="15000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="food" style="display: none;">
+                    <div class="item-image">
+                        <img src="chesse cake.png" alt="Cheesecake">
+                    </div>
+                    <h3>CHEESECAKE</h3>
+                    <p class="description">Creamy New York style cheesecake</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 35.000</span>
+                        <button class="add-to-cart" data-item="Cheesecake" data-price="35000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="food" style="display: none;">
+                    <div class="item-image">
+                        <img src="burger.png" alt="Burger">
+                    </div>
+                    <h3>BURGER</h3>
+                    <p class="description">a sandwich consisting of a cooked patty placed inside a sliced bun</p>
+                    <div class="item-footer">
+                        <span class="price">Rp 45.000</span>
+                        <button class="add-to-cart" data-item="Burger" data-price="45000">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>CONTACT US</h3>
+                    <p>123 Coffee Street, Menteng</p>
+                    <p>0812-1234-5678</p>
+                    <p>mr.coffee@cafe.id</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>SHORTCUT</h3>
+                    <p><a href="menu.html">menu</a></p>
+                    <p><a href="order.html">order</a></p>
+                    <p><a href="rewards.html">rewards</a></p>
+                    <p><a href="aboutus.html">about us</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>FOLLOW US</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Notification -->
+    <div id="cart-notification" class="cart-notification">
+        <span id="notification-text"></span>
+        <button id="close-notification">&times;</button>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html>
